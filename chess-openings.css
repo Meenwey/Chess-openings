@@ -1,0 +1,43 @@
+#chessboard{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 400px;
+    height: 400px;
+    border: 3px solid green;
+    position: absolute;
+    top: 40px;
+    left:40px;
+}
+
+.whitebox{
+    background-color: white;
+}
+.blackbox{
+    background-color: black;
+}
+
+#horcord{
+    background-color: orange;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 43px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#vercord{
+    background-color: greenyellow;
+    width: 40px;
+    height: 400px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
