@@ -2,6 +2,8 @@ let horcord = document.getElementById('horcord') // create horizontal coordinate
                
 var hcord = ["A", "B", "C", "D", "E", "F", "G", "H",]
 var vcord = ["1", "2", "3", "4", "5", "6", "7", "8"]
+
+var whitePawn = ['A']
                
                
     for(i=1; i<=8; i++)
@@ -28,7 +30,7 @@ let chessboard = document.getElementById('chessboard')
                 {
                     let box = document.createElement('div');  //create squares
                     chessboard.appendChild(box);                                   
-                    box.setAttribute("id", hcord[i-1]+vcord[j-1]); //give ID for squares
+                    box.setAttribute("id", hcord[j-1]+vcord[i-1]); //give ID for squares
                     box.setAttribute("class", "box");                    
     
                 if(i % 2 == 0){
@@ -50,3 +52,14 @@ let chessboard = document.getElementById('chessboard')
                 }
                 }
     }   
+
+const pawn = document.getElementById("D4");
+pawn.appendChild(document.createTextNode("\u2654"));
+
+const pawn1 = document.getElementById("D6");
+pawn1.appendChild(document.createTextNode("\u265A"));
+
+const pawn2 = document.getElementById("E4");
+pawn2.appendChild(document.createTextNode("\u2654"));
+
+document.getElementById("E6").innerHTML = "\u2658"

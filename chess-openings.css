@@ -8,16 +8,31 @@
     border: 3px solid green;
     position: absolute;
     top: 40px;
-    left:40px;
+    left: 40px;
 }
 
 .whitebox{
-    background-color: white;
+    /* background-color: white; */
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+    /* text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; */
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white,
+    1px 1px 10px white;
+    /* background-color: #FFFDD0; */
+    background-color: #FFFDD0;
 }
 .blackbox{
-    background-color: black;
+    /* background-color: black; */
+    /* text-shadow:
+    -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; */
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    /* background-color: #EEDC82; */
+    background-color: #C2B280;
 }
 
+.whitebox, .blackbox{
+    font-size: 35px;
+    text-align: center;
+}
 #horcord{
     background-color: orange;
     width: 400px;
@@ -40,4 +55,11 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
+}
+
+p{
+    position: relative;
+    top: 500px;
+    text-shadow:  0 0 12px blue;
+    font-size: 35px;
 }
