@@ -12,20 +12,12 @@
 }
 
 .whitebox{
-    /* background-color: white; */
-    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-    /* text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; */
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white,
     1px 1px 10px white;
-    /* background-color: #FFFDD0; */
     background-color: #FFFDD0;
 }
 .blackbox{
-    /* background-color: black; */
-    /* text-shadow:
-    -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; */
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-    /* background-color: #EEDC82; */
     background-color: #C2B280;
 }
 
@@ -57,9 +49,18 @@
     grid-template-rows: repeat(8, 1fr);
 }
 
+#panel{
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    background-color: red;
+    padding: 10px;
+}
+
 p{
-    position: relative;
-    top: 500px;
-    text-shadow:  0 0 12px blue;
-    font-size: 35px;
+    position: absolute;
+    top: 600px; 
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }

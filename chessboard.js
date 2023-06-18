@@ -53,13 +53,40 @@ let chessboard = document.getElementById('chessboard')
                 }
     }   
 
+
 const pawn = document.getElementById("D4");
 pawn.appendChild(document.createTextNode("\u2654"));
 
 const pawn1 = document.getElementById("D6");
 pawn1.appendChild(document.createTextNode("\u265A"));
 
-const pawn2 = document.getElementById("E4");
-pawn2.appendChild(document.createTextNode("\u2654"));
+const pawn2 = "\u2654";
 
-document.getElementById("E6").innerHTML = "\u2658"
+document.getElementById("E6").innerHTML = "\u2658";
+document.getElementById("A1").innerHTML = pawn2;
+
+function button1(){
+    document.getElementById("A1").innerHTML = ""; 
+    document.getElementById("D6").innerHTML = pawn2; 
+}
+
+let history =[]; //history of pieces' moves
+
+//function for changing location of pieces
+function movePiece(fromDivId, toDivId){
+var movingPiece = document.getElementById(fromDivId).innerHTML;
+
+document.getElementById(toDivId).innerHTML = movingPiece;
+document.getElementById(fromDivId).innerHTML = "";
+history.push({type: 'move', from: fromDivId, to: toDivId});
+}
+
+//function for undo last move
+function undo(){
+const lastChange = history.pop()
+if (lastChange.type === 'move'){
+    const from = document.getElementById(lastChange.from);
+    const to = document.getElementById(lastChange.to);
+    from.appendChild(to.lastChild)
+}
+}
